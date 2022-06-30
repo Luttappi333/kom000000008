@@ -34,7 +34,7 @@ def command(
             return False
         regex = r"^[{prefix}](\w+)(@{bot_name})?(?: |$)(.*)".format(
             prefix="|".join(escape(x) for x in PREFIX_HANDLER),
-            bot_name="BOT_USERNAME",
+            bot_name=BOT_USERNAME,
         )
         matches = compile_re(regex).search(text)
         if matches:
