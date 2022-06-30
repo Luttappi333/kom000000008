@@ -124,7 +124,7 @@ async def cleanservice(_, m: Message):
     return
 
 
-@Client.on_message(command("setwelcome") & admin_filter & bot_admin_filter)
+@Client.on_message(command("setwelcome") & admin_filter)
 async def save_wlcm(_, m: Message):
     db = Greetings(m.chat.id)
     if m and not m.from_user:
